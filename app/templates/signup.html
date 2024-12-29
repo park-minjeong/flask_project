@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}회원가입 페이지{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h1 class="text-center mb-4">회원가입</h1>
+        <form method="POST" action="/signup">
+            <!-- 아이디 -->
+            <div class="mb-3">
+                <input type="text" class="form-control" id="username" name="username" placeholder="아이디" required>
+            </div>
+            <!-- 비밀번호 -->
+            <div class="mb-3">
+                <input type="password" class="form-control" id="password" name="password" placeholder="비밀번호" required>
+            </div>
+            <!-- 전화번호 -->
+            <div class="mb-3">
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="전화번호 (예: 010-1234-5678)" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required>
+            </div>
+            <!-- 생년월일 -->
+            <div class="mb-3">
+                <input type="date" class="form-control" id="birthdate" name="birthdate" required>
+            </div>
+            <!-- 주소 -->
+            <div class="mb-3">
+                <input type="text" class="form-control" id="address" name="address" placeholder="주소" required>
+            </div>
+            <!-- 회원가입 버튼 -->
+            <button type="submit" class="btn btn-primary w-100 mb-3">회원가입</button>
+        </form>
+        <!-- 로그인 버튼 -->
+        <div class="text-center">
+            <a href="/login" class="btn btn-secondary w-100">로그인</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

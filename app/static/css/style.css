@@ -1,0 +1,60 @@
+/* 공통 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* 네비게이션 바 */
+.navbar {
+    margin-bottom: 20px;
+}
+
+/* 푸터 */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* 버튼 스타일 */
+.btn {
+    margin: 5px;
+}
+
+/* 페이지별 추가 스타일 */
+.main-content {
+    padding: 20px;
+}
+
+.form-control {
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed; /* 항상 고정 */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* 전체 너비 */
+}
+

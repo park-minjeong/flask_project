@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}관리자 페이지{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>관리자 페이지</h1>
+
+    <!-- 로그아웃 버튼 -->
+    <div class="mb-4 text-end">
+        <a href="{{ url_for('logout') }}" class="btn btn-danger">로그아웃</a>
+    </div>
+
+    <!-- 회원 목록 -->
+    <h2>회원 관리</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>아이디</th>
+                <th>전화번호</th>
+                <th>생년월일</th>
+                <th>주소</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.phone }}</td>
+                <td>{{ user.birthdate }}</td>
+                <td>{{ user.address }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
