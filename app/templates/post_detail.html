@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}게시글 상세 페이지{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mb-4">{{ post.title }}</h1>
+    <div class="mb-3">
+        <p>{{ post.created_at }}</p>
+        <!-- HTML 내용 렌더링 -->
+        <div class="border p-3">
+            {{ post.content | safe }}
+        </div>
+    </div>
+    <a href="/board" class="btn btn-secondary">목록으로 돌아가기</a>
+</div>
+{% endblock %}
